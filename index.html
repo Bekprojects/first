@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <!-- Loading the v6 core styles and the Solid and Brands styles -->
+    <link href="/your-path-to-fontawesome/css/fontawesome.css" rel="stylesheet">
+    <link href="/your-path-to-fontawesome/css/brands.css" rel="stylesheet">
+    <link href="/your-path-to-fontawesome/css/solid.css" rel="stylesheet">
+
+    <!-- update existing v5 CSS to use v6 icons and assets -->
+    <link href="/your-path-to-fontawesome/css/v5-font-face.css" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="exam.js">
+
+    <style>
+        .grey {
+            filter: grayscale(100%);
+            /* other styles if I want to add them */
+        }
+    </style>
+</head>
+
+<body id="myImg">
+
+
+    <h1 style="color: red">salom</h1>
+
+    <button onclick="grayscale(); play()">Grayscale</button>
+    <button onclick="display()">none</button>
+
+    <img src="https://www.w3.org/TR/2000/NOTE-SVG-access-20000807/tiger.png" id="myImg" />
+
+    <audio id="audio" src="audio/svet.mp3"></audio>
+
+    <script>
+        function play() {
+            var audio = document.getElementById("audio");
+            audio.play();
+        }
+    </script>
+
+
+    <script>
+
+        function grayscale() {
+            let img = document.getElementById("myImg");
+            img.classList.toggle("grey");
+        }
+        function display() {
+            let img = document.getElementById("myImg");
+            img.style.display = "none";
+        }
+    </script>
+
+</body>
+
+</html>
